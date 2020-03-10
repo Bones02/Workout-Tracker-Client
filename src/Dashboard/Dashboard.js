@@ -11,11 +11,11 @@ export default class Dashboard extends React.Component {
     }
     static contextType = ApiContext
     
-    TotalCalories() {
-        const { workouts=[] } = this.context
-        const calories = workouts.calories.join(', ')
-        console.log(calories)
-    }
+    // TotalCalories() {
+    //     const { workouts=[] } = this.context
+    //     const calories = workouts.calories.join(', ')
+    //     console.log(calories)
+    // }
 
 //     const minutes ={workouts.minutes}
 //     const total = {workouts}
