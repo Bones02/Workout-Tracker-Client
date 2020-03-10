@@ -73,18 +73,18 @@ class App extends Component {
   }
 
   renderNavRoutes() {
-    const { match } = this.props
+    // const { match } = this.props
     return (
         <>
-            {['${match.url}', '${match.url}/type/:typeId'].map(path => (
+            {['/App', '/App/type/:typeId'].map(path => (
                 <Route
                     exact
-                    key={match.path}
-                    path={match.path}
+                    key={path}
+                    path={path}
                     component={WorkoutListNav}
                 />
             ))}
-            <Route path="${match.path}/workout/:workoutId" component={WorkoutPageNav}  />
+            <Route path="/App/workout/:workoutId" component={WorkoutPageNav}  />
                 <Route path="/App/add-type" render={(props) => {
                     return (<AddType types={this.state.types} routeProps={props} />)}} />
                 <Route path="/App/add-workout" render={(props) => { 
@@ -97,15 +97,15 @@ class App extends Component {
     const { match } = this.props
       return (
           <>
-              {['${match.path}', '${match.url}/type/:typeId'].map(path => (
+              {['/App', '/App/type/:typeId'].map(path => (
                   <Route
                       exact
-                      key={match.path}
-                      path={match.path}
+                      key={path}
+                      path={path}
                       component={WorkoutListMain}
                   />
               ))}
-              <Route path="${match.path}/workout/:workoutId" component={WorkoutPageMain} />
+              <Route path="/App/workout/:workoutId" component={WorkoutPageMain} />
           </>
       );
   }

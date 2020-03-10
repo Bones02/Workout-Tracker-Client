@@ -39,7 +39,7 @@ export default class WorkoutListMain extends React.Component {
         <div className='WorkoutListMain__button-container'>
           <CircleButton
             tag={Link}
-            to='/add-workout'
+            to='/App/add-workout'
             type='button'
             className='WorkoutListMain__workout-button'>
             <FontAwesomeIcon icon='plus' />

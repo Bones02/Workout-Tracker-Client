@@ -32,7 +32,7 @@ export default class WorkoutListNav extends React.Component {
         <div className='WorkoutListNav__button-wrapper'>
           <CircleButton
             tag={Link}
-            to='/add-type'
+            to='/App/add-type'
             type='button'
             className='WorkoutListNav__add-type-button'
           >
