@@ -11,11 +11,17 @@ export default class Dashboard extends React.Component {
     }
     static contextType = ApiContext
     
-    // TotalCalories() {
-    //     const { workouts=[] } = this.context
-    //     const calories = workouts.calories.join(', ')
-    //     console.log(calories)
-    // }
+    TotalCalories() {
+        const { workouts=[] } = this.context
+        var calories = 0;
+        console.log("calories is currently is to " + calories);
+        workouts.forEach((item) => {
+          calories = calories + item.calories; 
+          console.log("calories is currently is to " + calories);
+        });
+        // Now calories will be the total of all workouts calories added together
+        console.log("Loop complete, total calories: " + calories)
+    }
 
 //     const minutes ={workouts.minutes}
 //     const total = {workouts}

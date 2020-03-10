@@ -73,7 +73,6 @@ class App extends Component {
   }
 
   renderNavRoutes() {
-    // const { match } = this.props
     return (
         <>
             {['/App', '/App/type/:typeId'].map(path => (
@@ -94,7 +93,6 @@ class App extends Component {
   }
 
   renderMainRoutes() {
-    const { match } = this.props
       return (
           <>
               {['/App', '/App/type/:typeId'].map(path => (

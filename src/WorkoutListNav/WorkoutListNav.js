@@ -10,7 +10,6 @@ export default class WorkoutListNav extends React.Component {
   static contextType = ApiContext;
 
   render() {
-    const { match } = this.props
     const { types=[], workouts=[] } = this.context
     return (
       <div className='WorkoutListNav'>
