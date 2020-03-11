@@ -30,7 +30,7 @@ class AddType extends React.Component {
         //     body: JSON.stringify({name: name.value }),
         //     headers: { 'Content-Type': 'application/json'}
         // }
-        // fetch(`${config.API_ENDPOINT}/type`, options) 
+        // fetch(`${config.API_ENDPOINT}/Add/type`, options) 
         //     .then(res => res.json())
         //     .then((result) => {
         //         console.log(result)

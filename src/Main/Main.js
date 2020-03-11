@@ -20,21 +20,20 @@ class Main extends Component {
     return (
         <HashRouter>
             <div>
-            <h1>Workout Tracker</h1>
-            <ul className="header">
-                <li><NavLink exact to="/">Home</NavLink></li>
-                <li><NavLink to="/App">Workout Tracker</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
-            </ul>
-            <div className="content">
-                <Route exact path="/" component={Home}/>
-                <Route path="/App" component={App}/>
-                <Route path="/contact" component={Contact}/>
-                <p>
-                    Welcome to the Workout Tracker!
-                </p>
-                
-            </div>
+                <h1>Workout Tracker</h1>
+                <ul className="header">
+                    <li><NavLink exact to="/">Home</NavLink></li>
+                    <li><NavLink to="/App">Workout Tracker</NavLink></li>
+                    <li><NavLink to="/contact">Contact</NavLink></li>
+                </ul>
+                <div className="content">
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/App" component={App}/>
+                    <Route path="/contact" component={Contact}/>
+                    <p>Created by Alyssa Bonesteel</p>
+                    <p>Copyright © 2020</p>
+                    <p>All Rights Reserved!</p>
+                </div>
             </div>
         </HashRouter>
     );

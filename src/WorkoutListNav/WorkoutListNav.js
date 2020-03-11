@@ -18,7 +18,7 @@ export default class WorkoutListNav extends React.Component {
             <li key={type.id}>
               <NavLink
                 className='WorkoutListNav__type-link'
-                to={`/type/${type.id}`}
+                to={`/App/type/${type.id}`}
               >
                 <span className='WorkoutListNav__num-workouts'>
                   {countWorkoutsForType(workouts, type.id)}

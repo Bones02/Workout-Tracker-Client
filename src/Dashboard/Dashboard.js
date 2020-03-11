@@ -16,56 +16,50 @@ export default class Dashboard extends React.Component {
         var calories = 0;
         console.log("calories is currently is to " + calories);
         workouts.forEach((item) => {
-          calories = calories + item.calories; 
+            calories = calories + Number(item.calories)
           console.log("calories is currently is to " + calories);
         });
         // Now calories will be the total of all workouts calories added together
         console.log("Loop complete, total calories: " + calories)
-    }
-
-//     const minutes ={workouts.minutes}
-//     const total = {workouts}
-
-//    renderTotalCalories = props => {    
-//     const total = props.calories.reduce(
-//           (prevValue, currentValue) => prevValue + currentValue.workouts.calories,
-//           0
-//         );
-//     };
-
-//     const TotalMinutes = props => {
-//         const total = props.minutes.reduce(
-//           (prevValue, currentValue) => prevValue + currentValue.workouts.minutes,
-//           0
-//         );
-//     };
-// // need number of workouts in state
-//     const TotalWorkouts = props => {
-//         const total = props.total.reduce(
-//           (prevValue, currentValue) => prevValue + currentValue.workouts,
-//           0
-//         );
-//     };
-    
-
-    render() {
-        //const { type } = this.props.match.params
-        //const { workouts=[] } = this.context
-        console.log('This is the dashboard')
-        
 
         return (
-        //One formula passed for each param.
+            calories
+        )
+    }
+
+    TotalMinutes() {
+        const { workouts=[] } = this.context
+        var minutes = 0;
+        console.log("minutes is currently is to " + minutes);
+        workouts.forEach((item) => {
+            minutes = minutes + Number(item.minutes)
+          console.log("calories is currently is to " + minutes);
+        });
+        // Now calories will be the total of all workouts calories added together
+        console.log("Loop complete, total calories: " + minutes)
+
+        return (
+            minutes
+        )
+    }
+
+    TotalWorkouts() {
+        return this.context.workouts.length;
+      }
+    
+    render() {
+        console.log('This is the dashboard')
+        return (
         
         <section className='Dashboard'>
-            <p>
-                This is where the Dashboard will display.
-            </p>
-            {/* <ul>
-               <p>Total Calories Burned: {this.TotalCalories}</p>;
-               <p>Total Calories Burned: {this.TotalMinutes}</p>;      
-               <p>Total Calories Burned: {this.TotalWorkouts}</p>;
-            </ul> */}
+            <h1>
+               User Dashboard 
+            </h1>
+            {<ul>
+               <p>Total Calories Burned: {this.TotalCalories()}</p>
+               <p>Total Minutes Burned: {this.TotalMinutes()}</p>     
+               <p>Total Workouts: {this.TotalWorkouts()}</p>
+            </ul>}
         </section>
         
 

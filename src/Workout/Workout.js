@@ -16,7 +16,7 @@ export default class Workout extends React.Component {
     e.preventDefault()
     const workoutId = this.props.id
 
-    fetch(`${config.API_ENDPOINT}/workout/${workoutId}`, {
+    fetch(`${config.API_ENDPOINT}/Add/workout/${workoutId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
@@ -42,7 +42,7 @@ export default class Workout extends React.Component {
     return (
       <div className='Workout'>
         <h2 className='Workout__title'>
-          <Link to={`/workout/${id}`}>
+          <Link to={`/App/workout/${id}`}>
             {name}
           </Link>
         </h2>

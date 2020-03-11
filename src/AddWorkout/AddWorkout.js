@@ -62,7 +62,7 @@ class AddWorkout extends React.Component {
         //     body: JSON.stringify({name: name.value, description: description, type: type, calories: calories, minutes: minutes}),
         //     headers: { 'Content-Type': 'application/json'}
         // }
-        // fetch(`${config.API_ENDPOINT}/workout`, options) 
+        // fetch(`${config.API_ENDPOINT}/Add/workout`, options) 
         //     .then(res => res.json())
         //     .then((result) => {
         //         console.log()
