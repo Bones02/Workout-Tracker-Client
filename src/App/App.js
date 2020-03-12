@@ -65,12 +65,18 @@ class App extends Component {
       });
   };
 
-  handleAddWorkout = workout => {
+  addWorkout = workout => {
     console.log(workout)  
     this.setState({
           workouts: [...this.state.workouts, workout]
       })
   }
+
+  addFolder = (type) => {
+    this.setState({
+        types: [...this.state.types, type]
+    })
+}
 
   renderNavRoutes() {
     return (
@@ -113,7 +119,8 @@ class App extends Component {
           workouts: this.state.workouts,
           types: this.state.types,
           deleteWorkout: this.handleDeleteWorkout,
-          addWorkout: this.handleAddWorkout
+          addWorkout: this.addWorkout,
+          addType: this.addType
       };
       return (
           <ApiContext.Provider value={value}>

@@ -56,17 +56,21 @@ class AddWorkout extends React.Component {
         
         const workout = {name, description, typeId, calories, minutes}
         this.context.addWorkout(workout)
-        //* Not using yet because no backend*
+        // * Not using yet because no backend*
         // let options = {
         //     method: 'POST', 
         //     body: JSON.stringify({name: name.value, description: description, type: type, calories: calories, minutes: minutes}),
         //     headers: { 'Content-Type': 'application/json'}
         // }
         // fetch(`${config.API_ENDPOINT}/Add/workout`, options) 
-        //     .then(res => res.json())
-        //     .then((result) => {
-        //         console.log()
-        //    this.context.addWorkout(result)
+        //     .then(res => {
+        //         if (!res.ok)
+        //         return res.json().then(e => Promise.reject(e))
+        //         return res.json()
+        //     })
+        //     .then(workout => {
+        //         this.context.addWorkout(workout)
+        //         this.props.history.push(`/type/${workout.typeId}`)
         //     })
     }
 

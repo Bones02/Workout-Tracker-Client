@@ -23,21 +23,27 @@ class AddType extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         const {name, id} = this.state;
+
+
+        const type = {name, id}
+        this.context.addType(type)
     
-        console.log(name);
+        // console.log(name);
         // let options = {
         //     method: 'POST', 
         //     body: JSON.stringify({name: name.value }),
         //     headers: { 'Content-Type': 'application/json'}
         // }
         // fetch(`${config.API_ENDPOINT}/Add/type`, options) 
-        //     .then(res => res.json())
-        //     .then((result) => {
-        //         console.log(result)
-        //     this.props.routeProps.history.push('/')
+        //     .then(res => {
+        //         if (!res.ok)
+        //             return res.json().then(e => Promise.reject(e))
+        //         return res.json()
         //     })
-        const type = {name, id}
-        this.context.addType(type)
+        //     .then(type => {
+        //         this.context.addType(type)
+        //         this.props.history.push(`/type/${type.id}`)
+        //     })
     }
 
     validateName() {
