@@ -15,22 +15,19 @@ export default class Workout extends React.Component {
   handleClickDelete = e => {
     e.preventDefault()
     const workoutId = this.props.id
+      console.log(this.props)
 
-    fetch(`${config.API_ENDPOINT}/Add/workout/${workoutId}`, {
+    fetch(`${config.API_ENDPOINT}/App/workout/${workoutId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
       },
     })
-      .then(res => {
-        if (!res.ok)
-          return res.json().then(e => Promise.reject(e))
-        return res.json()
-      })
+
       .then(() => {
         this.context.deleteWorkout(workoutId)
         // allow parent to perform extra behaviour
-        this.props.onDeleteWorkout(workoutId)
+        this.props.onDeleteWorkout()
       })
       .catch(error => {
         console.error({ error })
@@ -39,6 +36,7 @@ export default class Workout extends React.Component {
 
   render() {
     const { name, id, modified } = this.props
+    console.log(this.props)
     return (
       <div className='Workout'>
         <h2 className='Workout__title'>

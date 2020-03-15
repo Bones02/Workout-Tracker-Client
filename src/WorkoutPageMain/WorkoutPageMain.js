@@ -12,15 +12,13 @@ export default class WorkoutPageMain extends React.Component {
   }
   static contextType = ApiContext
 
-  handleDeleteWorkout = workoutId => {
-    this.setState({
-        workouts: this.state.workouts.filter(workout => workout.id !== workoutId)
-    });
-};
+  handleDeleteWorkout = () => {
+    this.props.history.push('/App')
+  };
 
   render() {
     const { workouts=[] } = this.context
-    const { workoutId } = this.props.match.params
+    const workoutId = parseInt(this.props.match.params.workoutId);
     const workout = findWorkout(workouts, workoutId) || { content: '' }
     return (
       <section className='WorkoutPageMain'>

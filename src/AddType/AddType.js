@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import config from '../config';
 import PropTypes from 'prop-types';
+import ApiContext from '../ApiContext';
 
 
 
 class AddType extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          name: {
+    state = {
+        name: {
             value: '',
             touched: false
-          }
         }
     } 
+
+    static contextType = ApiContext;
 
     updateName(name) {
         this.setState({name: {value: name, touched: true}});
@@ -22,28 +22,20 @@ class AddType extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const {name, id} = this.state;
-
-
-        const type = {name, id}
-        this.context.addType(type)
+        const {name} = this.state;
     
-        // console.log(name);
-        // let options = {
-        //     method: 'POST', 
-        //     body: JSON.stringify({name: name.value }),
-        //     headers: { 'Content-Type': 'application/json'}
-        // }
-        // fetch(`${config.API_ENDPOINT}/Add/type`, options) 
-        //     .then(res => {
-        //         if (!res.ok)
-        //             return res.json().then(e => Promise.reject(e))
-        //         return res.json()
-        //     })
-        //     .then(type => {
-        //         this.context.addType(type)
-        //         this.props.history.push(`/type/${type.id}`)
-        //     })
+        console.log(name);
+        let options = {
+            method: 'POST', 
+            body: JSON.stringify({name: name.value }),
+            headers: { 'Content-Type': 'application/json'}
+        }
+        fetch(`${config.API_ENDPOINT}/App/type`, options) 
+        .then(res => res.json())
+        .then(() => {
+            this.context.addType({name: name.value})
+            this.props.history.push(`/App`)
+        })
     }
 
     validateName() {
@@ -56,7 +48,6 @@ class AddType extends React.Component {
     }
 
     render() {
-        const nameError = this.validateName();
         
         return (
             <form className="registration" onSubmit={e => this.handleSubmit(e)}>
@@ -81,11 +72,5 @@ class AddType extends React.Component {
         )
     }
 }
-
-AddType.propTypes = {
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string,
-    touched: PropTypes.bool
-};
 
 export default AddType;

@@ -19,7 +19,7 @@ class AddWorkout extends React.Component {
           description: '',
           typeId: '',
           calories: '',
-          minutes: '',
+          minutes: ''
         }
     } 
     static contextType = ApiContext
@@ -54,24 +54,27 @@ class AddWorkout extends React.Component {
         console.log('handle submit variables calories', calories );
         console.log('handle submit variables minutes', minutes );
         
-        const workout = {name, description, typeId, calories, minutes}
-        this.context.addWorkout(workout)
-        // * Not using yet because no backend*
-        // let options = {
-        //     method: 'POST', 
-        //     body: JSON.stringify({name: name.value, description: description, type: type, calories: calories, minutes: minutes}),
-        //     headers: { 'Content-Type': 'application/json'}
-        // }
-        // fetch(`${config.API_ENDPOINT}/Add/workout`, options) 
-        //     .then(res => {
-        //         if (!res.ok)
-        //         return res.json().then(e => Promise.reject(e))
-        //         return res.json()
-        //     })
-        //     .then(workout => {
-        //         this.context.addWorkout(workout)
-        //         this.props.history.push(`/type/${workout.typeId}`)
-        //     })
+        let options = {
+            method: 'POST', 
+            body: JSON.stringify({
+                name: name.value, 
+                description, 
+                typeid: typeId, 
+                calories, 
+                minutes
+            }),
+            headers: { 'Content-Type': 'application/json'}
+        }
+        fetch(`${config.API_ENDPOINT}/App/workout`, options) 
+            .then(res => {
+                if (!res.ok)
+                return res.json().then(e => Promise.reject(e))
+                return res.json()
+            })
+            .then((workout) => {
+                this.context.addWorkout(workout)
+                this.props.history.push(`/App/type/${workout.typeid}`)
+            })
     }
 
     validateName() {
@@ -101,29 +104,32 @@ class AddWorkout extends React.Component {
                 <h2>Add Workout</h2>
                 <div className="addworkout__hint">* required field</div>  
                 <div className="form-group">
-                    <label htmlFor="name">Name *</label>
-                    <input type="text" className="name__control"
+                    <label htmlFor="name">Name * {' '}
+                    <input type="text" className="name__control" required
                         name="name" id="name" onChange={e => this.updateName(e.target.value)}/>
-                    {this.state.name.touched && <ValidationError message={'Validation Error'} />}
+                    </label><br />
 
-                    <label htmlFor="description">Add Description *</label>
-                    <input type="text" className="name__control"
+                    <label htmlFor="description">Add Description * {' '}
+                    <input type="text" className="name__control" required
                         name="description" id="description" onChange={e => this.updateDescription(e.target.value)}/>
+                    </label><br />
 
-                    <label htmlFor="calories">Enter Number of Calories Burned *</label>
-                    <input type="text" className="name__control"
+                    <label htmlFor="calories">Enter Number of Calories Burned * {' '}
+                    <input type="text" className="name__control" required
                         name="calories" id="calories" onChange={e => this.updateCalories(e.target.value)}/>
-                    
-                    <label htmlFor="minutes">Enter Number of Minutes *</label>
-                    <input type="text" className="name__control"
-                        name="minutes" id="minutes" onChange={e => this.updateMinutes(e.target.value)}/>
+                    </label><br />
 
-                    <label htmlFor="type">Select Type *</label>
+                    <label htmlFor="minutes">Enter Number of Minutes * {' '}
+                    <input type="text" className="name__control" required
+                        name="minutes" id="minutes" onChange={e => this.updateMinutes(e.target.value)}/>
+                    </label><br />
+
+                    <label htmlFor="type">Select Type * {' '}
                     <select onChange={e => this.handleDropdownClick(e.target.value)}>
                         <option/>
                         {dropdownItems} 
                     </select>
-
+                    </label>
                 </div>
 
                 <div className="addtype__button__group">
@@ -148,5 +154,13 @@ class AddWorkout extends React.Component {
         )
     }
 }
+
+AddWorkout.propTypes = {
+    name: PropTypes.string,
+    description: PropTypes.string,
+    folderid: PropTypes.number,
+    calories: PropTypes.string,
+    minutes: PropTypes.string
+};
 
 export default AddWorkout;

@@ -11,6 +11,7 @@ export default class WorkoutListNav extends React.Component {
 
   render() {
     const { types=[], workouts=[] } = this.context
+    
     return (
       <div className='WorkoutListNav'>
         <ul className='WorkoutListNav__list'>

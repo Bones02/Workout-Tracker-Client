@@ -14,50 +14,31 @@ import './App.css';
 
 class App extends Component {
   state = {
-      workouts: [
-        {name: 'Run',
-        description: 'Regular Path',
-        calories: '300',
-        minutes: '25',
-        typeId: '0',
-        id: '1'
-        },
-        {name: 'HITT',
-        description: 'Ambitious Workout',
-        calories: '500',
-        minutes: '56',
-        typeId: '1',
-        id: '2',
-        } 
-      ],
-      types: [
-        {name: 'Run',
-        id: '0'},
-        {name: 'HIIT',
-        id: '1'},
-        {name: 'Yoga',
-        id: '2'}
-      ]
+      workouts: [],
+      types: []
   };
 
 
-//   componentDidMount() {
-//     Promise.all([
-//         fetch(`${config.API_ENDPOINT}/workout`),
-//     ])
-//         .then(([workoutsRes]) => {
-//             if (!workoutsRes.ok)
-//                 return workoutsRes.json().then(e => Promise.reject(e));
+  componentDidMount() {
+    Promise.all([
+        fetch(`${config.API_ENDPOINT}/App/workout`),
+        fetch(`${config.API_ENDPOINT}/App/type`)
+    ])
+    .then(([workoutsRes, typesRes]) => {
+        if (!workoutsRes.ok)
+            return workoutsRes.json().then(e => Promise.reject(e));
+        if (!typesRes.ok)
+            return typesRes.json().then(e => Promise.reject(e));
 
-//             return Promise.all([workoutsRes.json()]);
-//         })
-//         .then(([workouts]) => {
-//             this.setState({workouts});
-//         })
-//         .catch(error => {
-//             console.error({error});
-//         });
-//     }
+        return Promise.all([workoutsRes.json(), typesRes.json()]);
+    })
+    .then(([workouts, types]) => {
+        this.setState({workouts, types});
+    })
+    .catch(error => {
+        console.error({error});
+    });
+    }
 
   handleDeleteWorkout = workoutId => {
       this.setState({
@@ -72,7 +53,7 @@ class App extends Component {
       })
   }
 
-  addFolder = (type) => {
+  addFolder = type => {
     this.setState({
         types: [...this.state.types, type]
     })
@@ -90,10 +71,10 @@ class App extends Component {
                 />
             ))}
             <Route path="/App/workout/:workoutId" component={WorkoutPageNav}  />
-                <Route path="/App/add-type" render={(props) => {
-                    return (<AddType types={this.state.types} routeProps={props} />)}} />
-                <Route path="/App/add-workout" render={(props) => { 
-                    return ( <AddWorkout types={this.state.types} routeProps={props}/> )}}  />
+                <Route path="/App/add-type" render={(props) => 
+                    <AddType types={this.state.types} {...props} />} />
+                <Route path="/App/add-workout" render={(props) => 
+                    <AddWorkout types={this.state.types} {...props}/> }  />
         </>
     );
   }

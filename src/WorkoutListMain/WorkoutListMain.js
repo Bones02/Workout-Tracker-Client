@@ -16,12 +16,15 @@ export default class WorkoutListMain extends React.Component {
   }
   static contextType = ApiContext
 
+    handleDeleteNote = () => {
+    this.props.history.push('/')
+  };
   
 
   render() {
-    const { type } = this.props.match.params
     const { workouts=[] } = this.context
-    const workoutsForType = getWorkoutsForType(workouts, type)
+    const typeId = this.props.match.params.typeId
+    const workoutsForType = getWorkoutsForType(workouts, typeId)
     return (
       <section className='WorkoutListMain'>
           <Dashboard/>
