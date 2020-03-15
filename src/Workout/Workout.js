@@ -26,7 +26,6 @@ export default class Workout extends React.Component {
 
       .then(() => {
         this.context.deleteWorkout(workoutId)
-        // allow parent to perform extra behaviour
         this.props.onDeleteWorkout()
       })
       .catch(error => {

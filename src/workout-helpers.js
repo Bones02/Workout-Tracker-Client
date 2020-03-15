@@ -8,8 +8,8 @@ workouts.find(workout => workout.id === workoutId)
 export const getWorkoutsForType = (workouts=[], typeId) => (
 (!typeId)
   ? workouts
-  : workouts.filter(workout => workout.typeId === parseInt(typeId))
+  : workouts.filter(workout => workout.typeid === parseInt(typeId))
 )
 
 export const countWorkoutsForType = (workouts=[], typeId) =>
-workouts.filter(workout => (workout.typeId === typeId)).length
+workouts.filter(workout => (workout.typeid === typeId)).length

@@ -65,7 +65,7 @@ class AddWorkout extends React.Component {
             }),
             headers: { 'Content-Type': 'application/json'}
         }
-        fetch(`${config.API_ENDPOINT}/App/workout`, options) 
+        fetch(`${config.API_ENDPOINT}/App/workout/`, options) 
             .then(res => {
                 if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
@@ -73,7 +73,7 @@ class AddWorkout extends React.Component {
             })
             .then((workout) => {
                 this.context.addWorkout(workout)
-                this.props.history.push(`/App/type/${workout.typeid}`)
+                this.props.history.push(`/App`)
             })
     }
 

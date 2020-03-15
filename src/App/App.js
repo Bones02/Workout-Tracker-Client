@@ -21,8 +21,8 @@ class App extends Component {
 
   componentDidMount() {
     Promise.all([
-        fetch(`${config.API_ENDPOINT}/App/workout`),
-        fetch(`${config.API_ENDPOINT}/App/type`)
+        fetch(`${config.API_ENDPOINT}/App/workout/`),
+        fetch(`${config.API_ENDPOINT}/App/type/`)
     ])
     .then(([workoutsRes, typesRes]) => {
         if (!workoutsRes.ok)

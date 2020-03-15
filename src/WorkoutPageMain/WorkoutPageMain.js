@@ -19,7 +19,7 @@ export default class WorkoutPageMain extends React.Component {
   render() {
     const { workouts=[] } = this.context
     const workoutId = parseInt(this.props.match.params.workoutId);
-    const workout = findWorkout(workouts, workoutId) || { content: '' }
+    const workout = findWorkout(workouts, workoutId) || { description: '' }
     return (
       <section className='WorkoutPageMain'>
         <Workout
