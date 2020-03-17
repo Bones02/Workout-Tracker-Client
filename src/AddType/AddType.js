@@ -22,7 +22,7 @@ class AddType extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const {name,typeid} = this.state;
+        const {name} = this.state;
     
         console.log(name);
         let options = {
@@ -31,14 +31,10 @@ class AddType extends React.Component {
             headers: { 'Content-Type': 'application/json'}
         }
         fetch(`${config.API_ENDPOINT}/App/type/`, options) 
-        .then(res => {
-            if (!res.ok)
-            return res.json().then(e => Promise.reject(e))
-            return res.json()
-        })
-        .then((respJson) => {
-            this.context.addFolder({name: respJson.name, id: respJson.id})
-            this.props.history.push(`/type/${typeid}`)
+        .then(res => res.json())
+        .then(() => {
+            this.context.addType({name: name.value})
+            this.props.history.push(`/App`)
         })
     }
 

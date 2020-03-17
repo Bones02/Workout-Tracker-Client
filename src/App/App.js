@@ -53,7 +53,7 @@ class App extends Component {
       })
   }
 
-  addFolder = type => {
+  addType = type => {
     this.setState({
         types: [...this.state.types, type]
     })
