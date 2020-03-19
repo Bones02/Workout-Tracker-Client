@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CircleButton from '../CircleButton/CircleButton'
 import ApiContext from '../ApiContext'
 import { findWorkout, findType } from '../workout-helpers'
-//import './WorkoutPageNav.css'
+import './WorkoutPageNav.css'
 
 export default class WorkoutPageNav extends React.Component {
   static defaultProps = {

@@ -1,5 +1,5 @@
 import React from 'react'
-//import './WorkoutForm.css'
+import './WorkoutForm.css'
 
 export default function WorkoutForm(props) {
   const { className, ...otherProps } = props

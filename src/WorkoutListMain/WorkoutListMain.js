@@ -6,7 +6,7 @@ import Dashboard from '../Dashboard/Dashboard'
 import CircleButton from '../CircleButton/CircleButton'
 import ApiContext from '../ApiContext'
 import { getWorkoutsForType} from '../workout-helpers'
-//import './WorkoutListMain.css'
+import './WorkoutListMain.css'
 
 export default class WorkoutListMain extends React.Component {
   static defaultProps = {
@@ -16,7 +16,7 @@ export default class WorkoutListMain extends React.Component {
   }
   static contextType = ApiContext
 
-    handleDeleteNote = () => {
+    handleDeleteWorkout = () => {
     this.props.history.push('/')
   };
   

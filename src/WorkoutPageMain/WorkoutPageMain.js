@@ -2,7 +2,7 @@ import React from 'react';
 import Workout from '../Workout/Workout';
 import ApiContext from '../ApiContext';
 import { findWorkout } from '../workout-helpers';
-//import './WorkoutPageMain.css';
+import './WorkoutPageMain.css';
 
 export default class WorkoutPageMain extends React.Component {
   static defaultProps = {

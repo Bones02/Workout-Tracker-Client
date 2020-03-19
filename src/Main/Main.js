@@ -6,14 +6,15 @@ import {
   } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faPlus, faChevronLeft, faTrashAlt, faCheckDouble
+  faPlus, faChevronLeft, faTrashAlt, faCheckDouble, faCoffee, faRunning
 } from '@fortawesome/free-solid-svg-icons'
 import Home from '../Home/Home'
 import App from '../App/App'
 import Contact from '../Contact/Contact'
 import 'typeface-roboto'
+import './Main.css'
 
-library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
+library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble, faCoffee, faRunning)
 
 class Main extends Component {
   render() {
@@ -30,9 +31,11 @@ class Main extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/App" component={App}/>
                     <Route path="/contact" component={Contact}/>
-                    <p>Created by Alyssa Bonesteel</p>
-                    <p>Copyright © 2020</p>
-                    <p>All Rights Reserved!</p>
+                    <div class="footer">
+                        <p>Created by Alyssa Bonesteel</p>
+                        <p>Copyright © 2020</p>
+                        <p>All Rights Reserved!</p>
+                    </div>
                 </div>
             </div>
         </HashRouter>

@@ -89,7 +89,7 @@ class AddWorkout extends React.Component {
     validateType() {
         const type = this.state.typeID.trim();
         if (type.length === 0) {
-          return "Folder is required";
+          return "Workout type is required";
         }
     }
 
@@ -158,7 +158,7 @@ class AddWorkout extends React.Component {
 AddWorkout.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
-    folderid: PropTypes.number,
+    typeid: PropTypes.number,
     calories: PropTypes.string,
     minutes: PropTypes.string
 };

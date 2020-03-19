@@ -110,7 +110,7 @@ class App extends Component {
                   <header className="App__header">
                       <h1>
                           <Link to="/App">Workout Tracker</Link>{' '}
-                          <FontAwesomeIcon icon="check-double" />
+                          <FontAwesomeIcon icon="running" />
                       </h1>
                   </header>
                   <main className="App__main">{this.renderMainRoutes()}</main>

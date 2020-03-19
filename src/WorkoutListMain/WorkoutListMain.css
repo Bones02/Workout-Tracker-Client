@@ -1,0 +1,21 @@
+
+.WorkoutListMain ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 10px;
+}
+  
+.WorkoutListMain__button-container {
+    max-width: 380px;
+    margin: auto;
+    justify-self: center;
+}
+  
+.WorkoutListMain__add-workout-button {
+    margin: auto;
+}
+
+.WorkoutListMain__add-workout-button:hover {
+    background-color: #29862e;
+    color: white;
+}

@@ -1,0 +1,111 @@
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) {
+    .WorkoutListNav__list {
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+    }
+
+    .WorkoutListNav__button-wrapper {
+        margin: auto;
+        max-width: 180px;
+    }
+    .WorkoutListNav__add-type-button {
+        margin: auto;
+    }
+
+    .WorkoutListNav__add-type-button:hover {
+        background-color: #29862e;
+        color: white;
+    }
+
+    .header {
+        justify-content: center;
+    }
+    
+    .WorkoutListNav__type-link {
+        background-color:#73B9FF;
+        color: black;
+        display: block;
+        font-family: var(--custom-font);
+        font-size: 14px;
+        margin: auto;
+        max-width: 180px;
+        padding: 8px 16px;
+        text-decoration: none;
+
+    }
+
+    .WorkoutListNav__type-link:hover {
+        color: #FFB72F;
+        cursor: pointer;
+    }
+
+    .WorkoutListNav__type-link.active {
+        background-color:#73B9FF;
+    }
+    
+    .WorkoutListNav__num-workouts {
+        color:black;
+        display: block;
+        float: right;
+        font-size: 8px;
+    }
+}
+
+@media only screen 
+    and (min-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)  {
+    .WorkoutListNav__list {
+        list-style-type: none;
+        margin: 20px 0 0;
+        padding: 0;
+    }
+
+    .WorkoutListNav__button-wrapper {
+        margin: 0 0 0 auto;
+        max-width: 180px;
+    }
+    
+    .WorkoutListNav__add-type-button {
+        margin: 20px auto;
+    }
+
+    .WorkoutListNav__add-type-button:hover {
+        background-color: #29862e;
+        color: white;
+    }
+
+    .header {
+        justify-content: center;
+    }
+    
+    .WorkoutListNav__type-link {
+        background-color:#73B9FF;
+        color: black;
+        display: block;
+        font-family: var(--custom-font);
+        font-size: 20px;
+        margin: 0 0 8px auto;
+        max-width: 180px;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .WorkoutListNav__type-link:hover {
+        color: #FFB72F;
+        cursor: pointer;
+    }
+
+    .WorkoutListNav__type-link.active {
+        background-color:#73B9FF;
+    }
+    
+    .WorkoutListNav__num-workouts {
+        color:black;
+        display: block;
+        float: right;
+        font-size: 12px;
+    }
+}

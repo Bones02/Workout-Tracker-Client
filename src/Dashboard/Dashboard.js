@@ -2,6 +2,7 @@ import React from 'react'
 import ApiContext from '../ApiContext'
 import Workout from '../Workout/Workout'
 import { getWorkoutsForType} from '../workout-helpers'
+import './Dashboard.css'
 
 export default class Dashboard extends React.Component {
     static defaultProps = {
@@ -48,17 +49,16 @@ export default class Dashboard extends React.Component {
       }
     
     render() {
-        console.log('This is the dashboard')
         return (
         
-        <section className='Dashboard'>
-            <h1>
+        <section className='dashboard'>
+            <h1 class='dashboard_title'>
                User Dashboard 
             </h1>
-            {<ul>
-               <p>Total Calories Burned: {this.TotalCalories()}</p>
-               <p>Total Minutes Burned: {this.TotalMinutes()}</p>     
-               <p>Total Workouts: {this.TotalWorkouts()}</p>
+            {<ul class='board'>
+               <p class='calories'>Total Calories Burned: {this.TotalCalories()}</p>
+               <p class='minutes'>Total Minutes Burned: {this.TotalMinutes()}</p>     
+               <p class='workouts'>Total Workouts: {this.TotalWorkouts()}</p>
             </ul>}
         </section>
         

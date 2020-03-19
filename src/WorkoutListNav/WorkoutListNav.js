@@ -4,16 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CircleButton from '../CircleButton/CircleButton';
 import ApiContext from '../ApiContext';
 import { countWorkoutsForType } from '../workout-helpers';
-//import './WorkoutListNav.css'
+import './WorkoutListNav.css'
 
 export default class WorkoutListNav extends React.Component {
   static contextType = ApiContext;
 
   render() {
     const { types=[], workouts=[] } = this.context
-    
+
     return (
       <div className='WorkoutListNav'>
+        <h2 class='header'> 
+            Workout Type
+        </h2>
         <ul className='WorkoutListNav__list'>
           {types.map(type =>
             <li key={type.id}>

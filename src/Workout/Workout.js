@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext'
 import config from '../config'
-//import './Workout.css'
+import './Workout.css'
 
 export default class Workout extends React.Component {
   static defaultProps ={
