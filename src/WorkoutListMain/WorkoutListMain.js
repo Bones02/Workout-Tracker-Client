@@ -28,6 +28,9 @@ export default class WorkoutListMain extends React.Component {
     return (
       <section className='WorkoutListMain'>
           <Dashboard/>
+        <h2>
+          Workouts
+        </h2>
         <ul>
           {workoutsForType.map(workout =>
             <li key={workout.id}>

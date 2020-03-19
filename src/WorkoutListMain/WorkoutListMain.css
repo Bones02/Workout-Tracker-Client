@@ -1,21 +1,54 @@
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 500px) { 
+    .WorkoutListMain ul {
+        list-style-type: none;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    .WorkoutListMain__button-container {
+        margin: auto;
+        
+    }
+    
+    .WorkoutListMain__add-workout-button {
+        margin: auto;
+    }
 
-.WorkoutListMain ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 10px;
-}
-  
-.WorkoutListMain__button-container {
-    max-width: 380px;
-    margin: auto;
-    justify-self: center;
-}
-  
-.WorkoutListMain__add-workout-button {
-    margin: auto;
+    .WorkoutListMain__add-workout-button:hover {
+        background-color: #29862e;
+        color: white;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
 }
 
-.WorkoutListMain__add-workout-button:hover {
-    background-color: #29862e;
-    color: white;
+@media only screen 
+and (min-device-width: 501px) {
+    .WorkoutListMain ul {
+        list-style-type: none;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    .WorkoutListMain__button-container {
+        margin: auto;
+        
+    }
+    
+    .WorkoutListMain__add-workout-button {
+        margin: auto;
+    }
+
+    .WorkoutListMain__add-workout-button:hover {
+        background-color: #29862e;
+        color: white;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
 }
