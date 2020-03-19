@@ -14,7 +14,7 @@ export default class WorkoutListNav extends React.Component {
 
     return (
       <div className='WorkoutListNav'>
-        <h2 class='header'> 
+        <h2 className='header'> 
             Workout Type
         </h2>
         <ul className='WorkoutListNav__list'>

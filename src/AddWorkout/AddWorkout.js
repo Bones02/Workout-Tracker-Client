@@ -40,19 +40,12 @@ class AddWorkout extends React.Component {
     }
 
     handleDropdownClick(typeId) { 
-        console.log(typeId)
         this.setState({typeId: typeId});
     }
 
     handleSubmit(event) {
         event.preventDefault();
         const {name, description, typeId, calories, minutes} = this.state;
-
-        console.log('handle submit variables name', name );
-        console.log('handle submit variables description', description ); 
-        console.log('handle submit variables typeId',typeId );
-        console.log('handle submit variables calories', calories );
-        console.log('handle submit variables minutes', minutes );
         
         let options = {
             method: 'POST', 

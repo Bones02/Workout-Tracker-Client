@@ -1,92 +1,91 @@
 @media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 500px) {
-    .App {
-      --custom-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-      display: grid;
-      grid-gap: 20px;
-      grid-template-areas: "header" "content" "main" ;
-      grid-template-columns: 1fr;  
-      text-align: center;
-      min-height: 100vh;
-    }
-
-    h1 {
-      font-size: 16px;
-    }
-
-    .App__nav {
-      background-color: darkgray;
-      color: black;
-      grid-area: content;
-      height: calc(100vh - 120px);
-      overflow: auto;
-    }
-    
-    .App__header {
-      background-color:lightgrey;
-      color: black;
-      font-family: var(--custom-font);
-      grid-area: header;
-      padding-left: 16px;
-      padding-top: 15px;
-      text-align: center;
-    }
-    
-    .App__header a {
-      color: black;
-    }
-    
-    .App__main {
-      background-color: grey;
-      grid-area: main;
-      height: calc(100vh - 120px);
-      overflow: auto;
-    }
+and (min-device-width: 300px) 
+and (max-device-width: 500px) {
+  .App {
+    --custom-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "header" "content" "main" ;
+    grid-template-columns: 1fr;  
+    text-align: center;
+    min-height: 100vh;
   }
 
-  @media only screen 
-  and (min-device-width: 501px) {
-    .App {
-      display: grid;
-      grid-template-areas: 
-      "header header"
-      "sidebar main";
-      grid-template-columns: 1fr 2.3fr;
-      grid-template-rows: 120px 1fr;
-      min-height: 100vh;
-    }
-    
-    h1 {
-      font-size: 40px;
-    }
-    
-    .App__nav {
-      background-color: darkgray;
-      color: black;
-      grid-area: sidebar;
-      height: calc(100vh - 120px);
-      overflow: auto;
-    }
-    
-    .App__header {
-      background-color:lightgrey;
-      color: black;
-      font-family: var(--custom-font);
-      grid-area: header;
-      padding-left: 16px;
-      padding-top: 32px;
-      text-shadow: 2px 1px 2px black;
-      text-align: center;
-    }
-    
-    .App__main {
-      background-color: grey;
-      grid-area: main;
-      height: calc(100vh - 120px);
-      overflow: auto;
-    }
-
+  h1 {
+    font-size: 16px;
   }
+
+  .App__nav {
+    background-color: darkgray;
+    color: black;
+    grid-area: content;
+    height: calc(100vh - 120px);
+    overflow: auto;
+  }
+    
+  .App__header {
+    background-color:lightgrey;
+    color: black;
+    font-family: var(--custom-font);
+    grid-area: header;
+    padding-left: 16px;
+    padding-top: 15px;
+    text-align: center;
+  }
+    
+  .App__header a {
+    color: black;
+  }
+  
+  .App__main {
+    background-color: grey;
+    grid-area: main;
+    height: calc(100vh - 120px);
+    overflow: auto;
+  }
+}
+
+@media only screen 
+and (min-device-width: 501px) {
+  .App {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "sidebar main";
+    grid-template-columns: 1fr 2.3fr;
+    grid-template-rows: 120px 1fr;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  .App__nav {
+    background-color: darkgray;
+    color: black;
+    grid-area: sidebar;
+    height: calc(100vh - 120px);
+    overflow: auto;
+  }
+    
+  .App__header {
+    background-color:lightgrey;
+    color: black;
+    font-family: var(--custom-font);
+    grid-area: header;
+    padding-left: 16px;
+    padding-top: 32px;
+    text-shadow: 2px 1px 2px black;
+    text-align: center;
+  }
+  
+  .App__main {
+    background-color: grey;
+    grid-area: main;
+    height: calc(100vh - 120px);
+    overflow: auto;
+  }
+}

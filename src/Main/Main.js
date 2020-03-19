@@ -31,7 +31,7 @@ class Main extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/App" component={App}/>
                     <Route path="/contact" component={Contact}/>
-                    <div class="footer">
+                    <div className="footer">
                         <p>Created by Alyssa Bonesteel</p>
                         <p>Copyright © 2020</p>
                         <p>All Rights Reserved!</p>

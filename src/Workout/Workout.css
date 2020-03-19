@@ -1,6 +1,6 @@
 @media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 500px) { 
+and (min-device-width: 300px) 
+and (max-device-width: 500px) { 
   .Workout {
     --workout-height: 88px;
     background-color: #73B9FF;
@@ -61,7 +61,7 @@
 }  
 
 @media only screen 
-  and (min-device-width: 501px) {
+and (min-device-width: 501px) {
 
     .Workout {
         --workout-height: 88px;

@@ -46,8 +46,7 @@ class App extends Component {
       });
   };
 
-  addWorkout = workout => {
-    console.log(workout)  
+  addWorkout = workout => { 
     this.setState({
           workouts: [...this.state.workouts, workout]
       })
