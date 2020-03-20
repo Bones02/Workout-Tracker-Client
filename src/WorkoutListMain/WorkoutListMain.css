@@ -1,6 +1,6 @@
 @media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 500px) { 
+and (min-device-width: 300px) 
+and (max-device-width: 500px) { 
     .WorkoutListMain ul {
         list-style-type: none;
         margin: auto;

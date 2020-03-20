@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import config from '../config';
-import PropTypes from 'prop-types';
 import ApiContext from '../ApiContext';
 
 
@@ -24,7 +22,7 @@ class AddType extends React.Component {
         event.preventDefault();
         const {name} = this.state;
     
-        console.log(name);
+        
         let options = {
             method: 'POST', 
             body: JSON.stringify({name: name.value }),

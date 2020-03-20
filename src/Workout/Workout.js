@@ -15,7 +15,6 @@ export default class Workout extends React.Component {
   handleClickDelete = e => {
     e.preventDefault()
     const workoutId = this.props.id
-      console.log(this.props)
 
     fetch(`${config.API_ENDPOINT}/App/workout/${workoutId}`, {
       method: 'DELETE',
@@ -35,7 +34,7 @@ export default class Workout extends React.Component {
 
   render() {
     const { name, id, modified } = this.props
-    console.log(this.props)
+    
     return (
       <div className='Workout'>
         <h2 className='Workout__title'>

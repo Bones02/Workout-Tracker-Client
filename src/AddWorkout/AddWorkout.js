@@ -1,12 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ApiContext from '../ApiContext';
 import config from '../config';
 import { Link } from 'react-router-dom'
-import { runInNewContext } from 'vm';
 import PropTypes from 'prop-types';
-import ValidationError from '../AddWorkout/ValidationError';
-
 
 class AddWorkout extends React.Component {
     constructor(props) {

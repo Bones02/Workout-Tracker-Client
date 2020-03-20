@@ -5,7 +5,6 @@ import WorkoutListNav from '../WorkoutListNav/WorkoutListNav';
 import WorkoutPageNav from '../WorkoutPageNav/WorkoutPageNav';
 import WorkoutListMain from '../WorkoutListMain/WorkoutListMain';
 import WorkoutPageMain from '../WorkoutPageMain/WorkoutPageMain';
-import Workout from '../Workout/Workout';
 import ApiContext from '../ApiContext';
 import config from '../config';
 import AddWorkout from '../AddWorkout/AddWorkout';

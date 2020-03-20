@@ -13,14 +13,10 @@ export default class Dashboard extends React.Component {
     TotalCalories() {
         const { workouts=[] } = this.context
         var calories = 0;
-        console.log("calories is currently is to " + calories);
         workouts.forEach((item) => {
             calories = calories + Number(item.calories)
-          console.log("calories is currently is to " + calories);
         });
         // Now calories will be the total of all workouts calories added together
-        console.log("Loop complete, total calories: " + calories)
-
         return (
             calories
         )
@@ -29,13 +25,10 @@ export default class Dashboard extends React.Component {
     TotalMinutes() {
         const { workouts=[] } = this.context
         var minutes = 0;
-        console.log("minutes is currently is to " + minutes);
         workouts.forEach((item) => {
             minutes = minutes + Number(item.minutes)
-          console.log("calories is currently is to " + minutes);
         });
         // Now calories will be the total of all workouts calories added together
-        console.log("Loop complete, total calories: " + minutes)
 
         return (
             minutes
