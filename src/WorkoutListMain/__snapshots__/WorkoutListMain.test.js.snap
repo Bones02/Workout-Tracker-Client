@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkoutListMain component renders a .WorkoutListMain by default 1`] = `
+<section
+  className="WorkoutListMain"
+>
+  <Dashboard
+    match={
+      Object {
+        "params": Object {},
+      }
+    }
+  />
+  <h2>
+    Workouts
+  </h2>
+  <ul />
+  <div
+    className="WorkoutListMain__button-container"
+  >
+    <NavCircleButton
+      className="WorkoutListMain__workout-button"
+      tag={[Function]}
+      to="/App/add-workout"
+      type="button"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="plus"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <br />
+      Workout
+    </NavCircleButton>
+  </div>
+</section>
+`;

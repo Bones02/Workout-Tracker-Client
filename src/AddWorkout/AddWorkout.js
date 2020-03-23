@@ -127,7 +127,7 @@ class AddWorkout extends React.Component {
                         to='/App'
                         type="reset" 
                         className="addworkout__button">
-                        Cancel
+                        Reset
                     </button>
             
                     <button 

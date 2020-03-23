@@ -9,6 +9,9 @@ import './Workout.css'
 export default class Workout extends React.Component {
   static defaultProps ={
     onDeleteWorkout: () => {},
+    match: {
+      params: {}
+    }
   }
   static contextType = ApiContext;
 
@@ -34,7 +37,7 @@ export default class Workout extends React.Component {
 
   render() {
     const { name, id, modified } = this.props
-    
+
     return (
       <div className='Workout'>
         <h2 className='Workout__title'>

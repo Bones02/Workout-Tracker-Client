@@ -60,7 +60,7 @@ class AddType extends React.Component {
     
                 <div className="addType__button__group">
                 <button type="reset" className="addtype__button">
-                    Cancel
+                    Reset
                 </button>
                 <button type="submit" className="addtype__button" disabled={this.validateName()}>
                     Save
