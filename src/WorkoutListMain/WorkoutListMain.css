@@ -22,7 +22,7 @@ and (max-device-width: 500px) {
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -49,6 +49,6 @@ and (min-device-width: 501px) {
     }
 
     h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
 }

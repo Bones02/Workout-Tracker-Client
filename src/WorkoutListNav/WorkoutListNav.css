@@ -19,10 +19,6 @@ and (max-device-width: 500px) {
         background-color: #29862e;
         color: white;
     }
-
-    .header {
-        justify-content: center;
-    }
     
     .WorkoutListNav__type-link {
         background-color:#73B9FF;
@@ -52,10 +48,18 @@ and (max-device-width: 500px) {
         float: right;
         font-size: 8px;
     }
+    h2 {
+        font-size: 14px;
+        margin-left: 5%;
+    }
 }
 
 @media only screen 
 and (min-device-width: 501px) {
+    h2 {
+        font-size: 32px;
+    }
+
     .WorkoutListNav__list {
         list-style-type: none;
         margin: 20px 0 0;
@@ -75,10 +79,7 @@ and (min-device-width: 501px) {
         background-color: #29862e;
         color: white;
     }
-
-    .header {
-        justify-content: center;
-    }
+    
     
     .WorkoutListNav__type-link {
         background-color:#73B9FF;
