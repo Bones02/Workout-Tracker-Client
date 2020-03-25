@@ -56,6 +56,7 @@ class AddWorkout extends React.Component {
         }
         fetch(`${config.API_ENDPOINT}/App/workout/`, options) 
             .then(res => {
+                console.log(options)
                 if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
                 return res.json()
@@ -82,6 +83,14 @@ class AddWorkout extends React.Component {
         }
     }
 
+    validateCalories(){
+
+    }
+
+    validateMinutes(){
+
+    }
+
     render() { 
         const {types} = this.props
         const dropdownItems = types.map(item => { 
@@ -104,12 +113,12 @@ class AddWorkout extends React.Component {
                     </label><br />
 
                     <label htmlFor="calories">Enter Number of Calories Burned * {' '}
-                    <input type="text" className="name__control" required
+                    <input type="number" className="name__control" required
                         name="calories" id="calories" onChange={e => this.updateCalories(e.target.value)}/>
                     </label><br />
 
                     <label htmlFor="minutes">Enter Number of Minutes * {' '}
-                    <input type="text" className="name__control" required
+                    <input type="number" className="name__control" required
                         name="minutes" id="minutes" onChange={e => this.updateMinutes(e.target.value)}/>
                     </label><br />
 

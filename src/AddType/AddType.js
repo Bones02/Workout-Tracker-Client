@@ -20,7 +20,7 @@ class AddType extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const {name} = this.state;
+        const {name,typeid} = this.state;
     
         
         let options = {
@@ -30,9 +30,9 @@ class AddType extends React.Component {
         }
         fetch(`${config.API_ENDPOINT}/App/type/`, options) 
         .then(res => res.json())
-        .then(() => {
-            this.context.addType({name: name.value})
-            this.props.history.push(`/App`)
+        .then((respJson) => {
+            this.context.addType({name: name.value, id: respJson.id})
+            this.props.history.push(`/App/type/${typeid}`)
         })
     }
 
