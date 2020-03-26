@@ -1,6 +1,13 @@
 @media only screen 
 and (min-device-width: 300px) 
 and (max-device-width: 500px) {
+    .type_header {
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     .WorkoutListNav__list {
         list-style-type: none;
         margin: auto;
@@ -56,8 +63,11 @@ and (max-device-width: 500px) {
 
 @media only screen 
 and (min-device-width: 501px) {
-    h2 {
-        font-size: 32px;
+    .type_header {
+        text-align: center;
+        margin: auto;
+        margin-top: 35px;
+        padding-right: 20px;
     }
 
     .WorkoutListNav__list {
@@ -69,6 +79,7 @@ and (min-device-width: 501px) {
     .WorkoutListNav__button-wrapper {
         margin: auto;
         max-width: 180px;
+        margin-bottom: 25px;
     }
     
     .WorkoutListNav__add-type-button {

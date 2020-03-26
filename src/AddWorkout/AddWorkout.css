@@ -1,0 +1,17 @@
+.addworkout {
+    width:200px;
+	padding:12px;
+	margin:6px auto;
+    background:#D3D3D3;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

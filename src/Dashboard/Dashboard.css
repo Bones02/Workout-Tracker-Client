@@ -6,13 +6,8 @@ and (max-device-width: 649px) {
         color: black;
         font-size: 12px;
         margin: auto;
-        padding: 8px 16px;
         font-family: var(--custom-font);
     } 
-   
-    h1 {
-        font-size: 16px;
-    }
 
     .dashboard__title {
         text-shadow: 2px 1px 2px black;
@@ -21,7 +16,6 @@ and (max-device-width: 649px) {
 
     .board {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
     }
 
@@ -38,13 +32,13 @@ and (max-device-width: 649px) {
         border: 1;
         color: black;
         display: block;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: bold;
         height: 90px;
         margin: auto;
         text-align: center;
         text-decoration: none;
-        width: 30%;
+        width: 35%;
     }
 
     .minutes {
@@ -53,13 +47,13 @@ and (max-device-width: 649px) {
         border: 1;
         color: black;
         display: block;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: bold;
         height: 90px;
         margin: auto;
         text-align: center;
         text-decoration: none;
-        width: 30%;
+        width: 35%;
     }
 
     .workouts {
@@ -68,13 +62,13 @@ and (max-device-width: 649px) {
         border: 1;
         color: black;
         display: block;
-        font-size: 11px;
+        font-size: 110x;
         font-weight: bold;
         height: 90px;
         margin: auto;
         text-align: center;
         text-decoration: none;
-        width: 30%;
+        width: 35%;
     }
 
 }
@@ -85,13 +79,15 @@ and (min-device-width: 650px) {
         background-color:#D3D3D3;
         color: black;
         font-size: 20px;
-        margin: 50px 20px 50px auto;
+        margin-top: 50px;
         padding: 8px 16px;
         font-family: var(--custom-font);
     }
 
     .dashboard__title {
         text-shadow: 2px 1px 2px black;
+        text-align: center;
+        margin: auto;
     }
 
     .board {

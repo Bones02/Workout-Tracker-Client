@@ -3,6 +3,7 @@ import ApiContext from '../ApiContext';
 import config from '../config';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
+import './AddWorkout.css'
 
 class AddWorkout extends React.Component {
     constructor(props) {
@@ -102,27 +103,27 @@ class AddWorkout extends React.Component {
                 <h2>Add Workout</h2>
                 <div className="addworkout__hint">* required field</div>  
                 <div className="form-group">
-                    <label htmlFor="name">Name * {' '}
+                    <label htmlFor="name">Name* {' '}
                     <input type="text" className="name__control" required
                         name="name" id="name" onChange={e => this.updateName(e.target.value)}/>
                     </label><br />
 
-                    <label htmlFor="description">Add Description * {' '}
+                    <label htmlFor="description">Add Description* {' '}
                     <input type="text" className="name__control" required
                         name="description" id="description" onChange={e => this.updateDescription(e.target.value)}/>
                     </label><br />
 
-                    <label htmlFor="calories">Enter Number of Calories Burned * {' '}
+                    <label htmlFor="calories">Number of Calories Burned* {' '}
                     <input type="number" className="name__control" required
                         name="calories" id="calories" onChange={e => this.updateCalories(e.target.value)}/>
                     </label><br />
 
-                    <label htmlFor="minutes">Enter Number of Minutes * {' '}
+                    <label htmlFor="minutes">Number of Minutes* {' '}
                     <input type="number" className="name__control" required
                         name="minutes" id="minutes" onChange={e => this.updateMinutes(e.target.value)}/>
                     </label><br />
 
-                    <label htmlFor="type">Select Type * {' '}
+                    <label htmlFor="type">Select Type* {' '}
                     <select onChange={e => this.handleDropdownClick(e.target.value)}>
                         <option/>
                         {dropdownItems} 

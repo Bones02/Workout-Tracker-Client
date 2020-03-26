@@ -16,7 +16,6 @@ export default class Dashboard extends React.Component {
         workouts.forEach((item) => {
             calories = calories + Number(item.calories)
         });
-        // Now calories will be the total of all workouts calories added together
         return (
             calories
         )
@@ -28,8 +27,6 @@ export default class Dashboard extends React.Component {
         workouts.forEach((item) => {
             minutes = minutes + Number(item.minutes)
         });
-        // Now calories will be the total of all workouts calories added together
-
         return (
             minutes
         )
@@ -41,17 +38,16 @@ export default class Dashboard extends React.Component {
     
     render() {
         return (
-        
-        <section className='dashboard'>
-            <h1 className='dashboard_title'>
-               User Dashboard 
-            </h1>
-            {<ul className='board'>
-               <p className='calories'>Total Calories Burned: {this.TotalCalories()}</p>
-               <p className='minutes'>Total Minutes Burned: {this.TotalMinutes()}</p>     
-               <p className='workouts'>Total Workouts: {this.TotalWorkouts()}</p>
-            </ul>}
-        </section>
+            <section className='dashboard'>
+                <h1 className='dashboard_title'>
+                User Dashboard 
+                </h1>
+                {<ul className='board'>
+                <p className='calories'>Total Calories Burned: {this.TotalCalories()}</p>
+                <p className='minutes'>Total Minutes Burned: {this.TotalMinutes()}</p>     
+                <p className='workouts'>Total Workouts: {this.TotalWorkouts()}</p>
+                </ul>}
+            </section>
         )
     }
 }

@@ -28,7 +28,7 @@ export default class WorkoutListMain extends React.Component {
     return (
       <section className='WorkoutListMain'>
           <Dashboard/>
-        <h2>
+        <h2 className="workouts_header">
           Workouts
         </h2>
         <ul>
