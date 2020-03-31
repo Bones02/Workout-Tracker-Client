@@ -37,17 +37,19 @@ export default class Dashboard extends React.Component {
       }
     
     render() {
-        return (
-            <section className='dashboard'>
-                <h1 className='dashboard_title'>
-                User Dashboard 
-                </h1>
+      return (
+        <section className='dashboard'>
+            <section>
+            <h1 class="dashboard_title">User Dashboard</h1>
+            </section>
+            <section> 
                 {<ul className='board'>
                 <p className='calories'>Total Calories Burned: {this.TotalCalories()}</p>
                 <p className='minutes'>Total Minutes Burned: {this.TotalMinutes()}</p>     
                 <p className='workouts'>Total Workouts: {this.TotalWorkouts()}</p>
                 </ul>}
             </section>
-        )
+        </section>
+    )
     }
 }

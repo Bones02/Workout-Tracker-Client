@@ -23,6 +23,7 @@ ul.header {
   padding: 0;
 }
 ul.header li a {
+  font-size: 12px;
   color: #FFF;
   font-weight: bold;
   text-decoration: none;

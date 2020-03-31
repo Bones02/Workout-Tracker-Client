@@ -21,7 +21,7 @@ and (max-device-width: 500px) {
     background-color: darkgray;
     color: black;
     grid-area: content;
-    height: calc(50vh - 120px);
+    height: calc(60vh - 120px);
     overflow: auto;
   }
     
@@ -30,8 +30,8 @@ and (max-device-width: 500px) {
     color: black;
     font-family: var(--custom-font);
     grid-area: header;
-    padding-left: 16px;
-    padding-top: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
     text-align: center;
   }
     

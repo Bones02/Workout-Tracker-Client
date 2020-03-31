@@ -4,27 +4,27 @@ and (max-device-width: 500px) {
     .WorkoutListMain {
         justify-content: center;
     }
+    .workouts_header{
+        text-align: center;
+        margin-bottom: 0px;
+    }
     .WorkoutListMain ul {
         list-style-type: none;
         margin: auto;
         padding: 10px;
         
     }
-    
     .WorkoutListMain__button-container {
-        margin: auto;
-        
+        margin: auto;  
+        margin-bottom: 25px;
     }
-    
     .WorkoutListMain__add-workout-button {
         margin: auto;
     }
-
     .WorkoutListMain__add-workout-button:hover {
         background-color: #29862e;
         color: white;
     }
-
     h2 {
         font-size: 14px;
     }

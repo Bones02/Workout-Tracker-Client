@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faPlus, faChevronLeft, faTrashAlt, faCheckDouble, faCoffee, faRunning
+  faPlus, faChevronLeft, faTrashAlt, faCheckDouble, faRunning
 } from '@fortawesome/free-solid-svg-icons'
 import Home from '../Home/Home'
 import App from '../App/App'
@@ -14,7 +14,7 @@ import Contact from '../Contact/Contact'
 import 'typeface-roboto'
 import './Main.css'
 
-library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble, faCoffee, faRunning)
+library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble, faRunning)
 
 class Main extends Component {
   render() {

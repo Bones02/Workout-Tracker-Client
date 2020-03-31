@@ -1,6 +1,7 @@
 @media only screen 
 and (min-device-width: 300px)   
 and (max-device-width: 649px) { 
+
     .dashboard {
         background-color:#D3D3D3;
         color: black;
@@ -9,9 +10,13 @@ and (max-device-width: 649px) {
         font-family: var(--custom-font);
     } 
 
-    .dashboard__title {
+    .dashboard_title {
         text-shadow: 2px 1px 2px black;
         font-size: 14px;
+        text-align: center;
+        margin-top: 0px;
+        padding-top:5px;
+        margin-bottom: 5px;
     }
 
     .board {
@@ -101,7 +106,7 @@ and (min-device-width: 650px) {
 
     p {
         margin: auto;
-        padding: 10% 8px 0px 8px;
+        padding: 8% 8px 0px 8px;
         justify-content: center;
     }
 

@@ -66,6 +66,9 @@ class AddWorkout extends React.Component {
                 this.context.addWorkout(workout)
                 this.props.history.push(`/App`)
             })
+            .catch(err => {
+                console.error(err);
+            })
     }
 
     validateName() {
@@ -83,15 +86,7 @@ class AddWorkout extends React.Component {
           return "Workout type is required";
         }
     }
-
-    validateCalories(){
-
-    }
-
-    validateMinutes(){
-
-    }
-
+    
     render() { 
         const {types} = this.props
         const dropdownItems = types.map(item => { 

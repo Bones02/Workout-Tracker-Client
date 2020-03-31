@@ -17,6 +17,7 @@ and (max-device-width: 500px) {
     .WorkoutListNav__button-wrapper {
         margin: auto;
         max-width: 180px;
+        margin-bottom: 15px;
     }
     .WorkoutListNav__add-type-button {
         margin: auto;
@@ -41,12 +42,12 @@ and (max-device-width: 500px) {
     }
 
     .WorkoutListNav__type-link:hover {
-        color: #FFB72F;
+        color: black;
         cursor: pointer;
     }
 
     .WorkoutListNav__type-link.active {
-        background-color:#73B9FF;
+        background-color: white;
     }
     
     .WorkoutListNav__num-workouts {

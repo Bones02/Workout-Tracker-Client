@@ -18,17 +18,17 @@ export default class WorkoutListNav extends React.Component {
             Workout Type
         </h2>
         <ul className='WorkoutListNav__list'>
-          {types.map(type =>
-            <li key={type.id}>
+          {types.map(type =>  
+              <li key={type.id}>
               <NavLink
                 className='WorkoutListNav__type-link'
-                to={`/App/type/${type.id}`}
-              >
-                <span className='WorkoutListNav__num-workouts'>
-                  {countWorkoutsForType(workouts, type.id)}
-                </span>
-                {type.name}
+                to={`/App/type/${type.id}`}>
+                  <span className='WorkoutListNav__num-workouts'>
+                    {countWorkoutsForType(workouts, type.id)}
+                  </span>
+                  {type.name}
               </NavLink>
+
             </li>
           )}
         </ul>
